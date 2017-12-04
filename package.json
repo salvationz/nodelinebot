@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "start": "node main.js",
+    "babelstart": "babel-node --presets env main.js",
+    "start": "node ./dist/main.js",
     "build": "babel main.js -d dist"
   },
   "dependencies": {
