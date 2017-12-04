@@ -7,7 +7,11 @@ var port = (process.env.PORT || 4000);
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-app.get('/webhook', function (req, res) {
+app.get('/', (req, res) =>{
+    res.send('V1.0.1');
+});
+
+app.post('/webhook', function (req, res) {
     var text = req.body.events[0].message.text
     var sender = req.body.events[0].source.userId
     var replyToken = req.body.events[0].replyToken
