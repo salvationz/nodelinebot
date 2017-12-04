@@ -8,7 +8,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 app.get('/', (req, res) =>{
-    res.send('V1.0.1');
+    res.send('V1.0.2' + process.env.version);
 });
 
 app.post('/webhook', function (req, res) {
@@ -37,7 +37,7 @@ function sendText(sender, text) {
     request({
         headers: {
             'Content-Type': 'application/json',
-            'Authorization': 'Bearer CTeYGYeTJDqtc06xBeTkoS8OhHtfUvQK4YgDRzHdUFomQtAiiaVxjv2wI+RdPqoHWnJ/ZBDMr4qEd/DKWmQgyyKdSHI0jT4SY/sCTixMuLEaUhHnnIhg//9SwJorJTOlT4pmwvhA3xb4slkvEy4vOgdB04t89/1O/w1cDnyilFU='
+            'Authorization': 'Bearer ' + process.env.APIKEY
         },
         url: 'https://api.line.me/v2/bot/message/push',
         method: 'POST',
