@@ -1,6 +1,6 @@
-import express from 'express';
-import bodyParser from 'body-parser';
-import request from 'request';
+var express = require('express');
+var bodyParser = require('body-parser');
+var request = require('request');
 
 var app = express();
 var port = (process.env.PORT || 4000);
