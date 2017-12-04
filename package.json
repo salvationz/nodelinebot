@@ -1,0 +1,17 @@
+{
+  "name": "nodebottest",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "babel-node --presets env main.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1"
+  }
+}
